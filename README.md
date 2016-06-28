@@ -9,8 +9,33 @@ Throttle or debounce calls to window.addEventListener(). The listener will addit
     $ npm install --save-dev throttled-event-listener
 
 # Usage
-  
-    TODO
+
+## Throttle
+
+    var throttler = require('throttled-event-listener');
+    throttler.add(
+        'scroll',
+        1000,
+        function(event) {
+            // called a maximum of once per 1000ms
+        }
+    );
+
+## Debounce
+
+    throttler.add(
+        'scroll',
+        1000,
+        function(event) {
+            // waits for a cooldown period of 1000ms between calls
+        }, {
+            debounce : true,
+        }
+    );
+
+## Stop throttle
+
+    throttler.end();
 
 # Build
 

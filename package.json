@@ -1,5 +1,5 @@
 {
-  "name": "throttled-event-listner",
+  "name": "throttled-event-listener",
   "version": "0.0.1",
   "description": "Throttle or debounce calls to window.addEventListener(). The listener will additionally be throttled by window.requestAnimationFrame().",
   "keywords": [
@@ -12,8 +12,8 @@
     "animation",
     "callback"
   ],
-  "homepage": "https://vivmaha.github.io/throttled-event-listner",
-  "main": "src/modules/throttled-event-listner",
+  "homepage": "https://vivmaha.github.io/throttled-event-listener",
+  "main": "src/modules/throttled-event-listener",
   "dependencies": {},
   "devDependencies": {
     "angular": "^1.4.9",
@@ -40,6 +40,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vivmaha/throttled-event-listner.git"
+    "url": "https://github.com/vivmaha/throttled-event-listener.git"
   }
 }

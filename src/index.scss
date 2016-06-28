@@ -18,7 +18,11 @@ body {
     }
 
     p, li {
-        font-size: 1.5em;
+        font-size: 1.5em;        
+    }
+    
+    em {
+        font-weight: bold;
     }
 
     pre {
@@ -31,6 +35,7 @@ body {
 
     ol, li {
         list-style: none;
+        padding: 0;
     }
 }
 

@@ -43,7 +43,6 @@ module.exports = function (grunt) {
                     src: [
                         'angular/angular.js',
                         'angular-route/angular-route.js',
-                        'angular-animate/angular-animate.js',
                     ],
                     dest: 'build/node_modules'
                 }]

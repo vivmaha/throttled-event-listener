@@ -1,10 +1,17 @@
 .page-home {
-    
-    &>:nth-child(2) {
-        &>* {
-            display: inline-block;
+    user-select: none;
+    &>:nth-child(4), &>:nth-child(5), &>:nth-child(6) {
+        display: flex;
+        align-items: center;    
+        
+        h2 {
+            width: 10vw;
+            text-align: right;
+            border-right: 1px solid $color-dark;
+            padding-right: 5px;
         }
         &>ol {
+            width: 70vw;
             overflow: hidden;
             &>li {
                 position: absolute;
@@ -23,11 +30,11 @@
                 opacity: 1;
             }
             50% {
-                transform: translateX(60vw);
+                transform: translateX(70vw);
                 opacity: 1;
             }
             100% {
-                transform: translateX(60vw);
+                transform: translateX(70vw);
                 opacity: 0;
             }
         }

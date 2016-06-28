@@ -1,0 +1,38 @@
+.page-home {
+    $margin-horz: 10vw;
+
+    &>:nth-child(2) {        
+        margin-left: $margin-horz;
+        &>p {
+            width: 40vw;
+            font-size: 1.5em;
+            &>em {
+                font-weight: bold;
+            }
+        }
+
+        &>div {
+            height: 20vh;
+            width: 20vw;
+            background-color: $color-dark;
+            margin-top: 120vh;
+            margin-bottom: 120vh;
+        }
+    }
+
+    &>:nth-child(3) {        
+        position: fixed;
+        top: 0;
+        right:$margin-horz;
+        &>ol {
+            padding: 0;
+            list-style: none;
+            $max-notifications: 20;
+            @for $i from 1 through $max-notifications {
+                :nth-child(#{$i}) {
+                    opacity: 1 - ($i / $max-notifications);
+                }
+            }
+        }
+    }
+}

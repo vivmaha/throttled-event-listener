@@ -1,0 +1,29 @@
+$color-light:#EEEEEE;
+$color-dark:#222222;
+
+body {
+    margin: 0;
+    background-color: $color-light;
+    color:$color-dark;
+
+    font-family: 'Indie Flower', cursive;
+    font-size: 14px;
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    p, li {
+        font-size: 1.5em;
+    }
+
+    pre {
+        font-family: 'Inconsolata';
+    }
+}
+
+@import "pages/pages.scss";

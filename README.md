@@ -1,4 +1,4 @@
-# client-rect-notifications
+# throttled-event-listner
 IN PROGRESS
 Throttle or debounce calls to window.addEventListener(). The listener will additionally be throttled by window.requestAnimationFrame().
 

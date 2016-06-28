@@ -1,4 +1,4 @@
-# throttled-event-listner
+# throttled-event-listener
 IN PROGRESS
 Throttle or debounce calls to window.addEventListener(). The listener will additionally be throttled by window.requestAnimationFrame().
 
@@ -6,7 +6,7 @@ Throttle or debounce calls to window.addEventListener(). The listener will addit
 
 # Install
 
-    $ npm install --save-dev throttled-event-listner
+    $ npm install --save-dev throttled-event-listener
 
 # Usage
   

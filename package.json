@@ -1,28 +1,24 @@
 {
-  "name": "client-rect-notifications",
+  "name": "throttled-event-listner",
   "version": "0.0.1",
-  "description": "Provides notifications for changes in the position of an HTML element relative to the viewport.",
+  "description": "Throttle or debounce calls to window.addEventListener(). The listener will additionally be throttled by window.requestAnimationFrame().",
   "keywords": [
-    "getboundingclientrect",
-    "htmlElement",
-    "rect",
-    "client",
-    "bounding",
-    "window",
-    "viewport",
-    "visible",
-    "view",
-    "notifications",
+    "throttle",
+    "debounce",
+    "interval",
+    "requestAnimationFrame",
+    "addEventListener",
+    "listener",
+    "animation",
     "callback"
   ],
-  "homepage": "https://vivmaha.github.io/client-rect-notifications",
-  "main": "src/modules/client-rect-notifications",
+  "homepage": "https://vivmaha.github.io/throttled-event-listner",
+  "main": "src/modules/throttled-event-listner",
   "dependencies": {},
   "devDependencies": {
     "angular": "^1.4.9",
     "angular-route": "^1.4.9",
     "autoprefixer": "^6.3.1",
-    "babel-preset-es2015": "^6.9.0",
     "babelify": "^7.3.0",
     "grunt": "^1.0.1",
     "grunt-browserify": "^5.0.0",
@@ -39,12 +35,11 @@
     "email" : "vivmaha@live.com"
   },
   "files": [
-    "src/modules/client-rect-notifications.js",
     "src/modules/throttled-event-listener.js"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vivmaha/client-rect-notifications.git"
+    "url": "https://github.com/vivmaha/throttled-event-listner.git"
   }
 }

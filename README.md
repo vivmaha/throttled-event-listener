@@ -1,33 +1,16 @@
 # client-rect-notifications
-Provides notifications for changes in the position of an HTML element relative to the viewport.
+IN PROGRESS
+Throttle or debounce calls to window.addEventListener(). The listener will additionally be throttled by window.requestAnimationFrame().
 
-[demo](https://vivmaha.github.io/client-rect-notifications)
+[demo](https://vivmaha.github.io/throttled-event-listner)
 
 # Install
 
-    $ npm install --save-dev client-rect-notifications
+    $ npm install --save-dev throttled-event-listner
 
 # Usage
   
-    var htmlElement = ...;
-	var clientRectNotifications = require('client-rect-notifications');
-	clientRectNotifications.add(
-	    htmlElement ,
-	    {
-	        completelyOutOfView : function() {
-	            // do something
-	        }, 
-	        completelyInView : function() {
-	            // do something
-	        },
-	        mostlyInView : function() {
-	            // do something
-	        },
-	        partiallyInView : function() {
-	            // do something
-	        }
-	    }
-	);
+    TODO
 
 # Build
 

@@ -2,7 +2,7 @@
 IN PROGRESS
 Throttle or debounce calls to window.addEventListener(). The listener will additionally be throttled by window.requestAnimationFrame().
 
-[demo](https://vivmaha.github.io/throttled-event-listener)
+#[Demo](https://vivmaha.github.io/throttled-event-listener)
 
 # Install
 

@@ -6,7 +6,11 @@
         [
             '$scope',
             function($scope) {
-
+                $scope.inputs = [];
+                window.addEventListener('mousedown', function(ev) {
+                    $scope.inputs.push({});
+                    $scope.$apply();
+                });
             }
         ]
     );

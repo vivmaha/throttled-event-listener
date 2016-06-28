@@ -24,6 +24,14 @@ body {
     pre {
         font-family: 'Inconsolata';
     }
+
+    main {
+        margin: 0 10vw; 
+    }
+
+    ol, li {
+        list-style: none;
+    }
 }
 
 @import "pages/pages.scss";

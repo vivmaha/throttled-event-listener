@@ -72,7 +72,7 @@ module.exports = function (grunt) {
                     'src/**/*.*',
                 ],
                 tasks: [
-                    'build-incremental',
+                    'build',
                 ],
                 options: {
                     livereload: {

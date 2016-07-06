@@ -1,42 +1,43 @@
-$color-light:#EEEEEE;
-$color-dark:#222222;
+$color-light: #eee;
+$color-dark: #222;
 
 body {
-    margin: 0;
-    background-color: $color-light;
-    color:$color-dark;
+  background-color: $color-light;
+  color: $color-dark;
+  font-family: 'Indie Flower', cursive;
+  font-size: 14px;
+  margin: 0;
 
-    font-family: 'Indie Flower', cursive;
-    font-size: 14px;
+  h1 {
+    font-size: 2em;
+  }
 
-    h1 {
-        font-size: 2em;
-    }
+  h2 {
+    font-size: 1.75em;
+  }
 
-    h2 {
-        font-size: 1.75em;
-    }
+  p,
+  li {
+    font-size: 1.5em;
+  }
 
-    p, li {
-        font-size: 1.5em;        
-    }
-    
-    em {
-        font-weight: bold;
-    }
+  em {
+    font-weight: bold;
+  }
 
-    pre {
-        font-family: 'Inconsolata';
-    }
+  pre {
+    font-family: 'Inconsolata';
+  }
 
-    main {
-        margin: 0 10vw; 
-    }
+  main {
+    margin: 0 10vw;
+  }
 
-    ol, li {
-        list-style: none;
-        padding: 0;
-    }
+  ol,
+  li {
+    list-style: none;
+    padding: 0;
+  }
 }
 
-@import "pages/pages.scss";
+@import 'pages/pages';

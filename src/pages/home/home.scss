@@ -1,42 +1,51 @@
 .page-home {
-    user-select: none;
-    &>:nth-child(4), &>:nth-child(5), &>:nth-child(6) {
-        display: flex;
-        align-items: center;    
-        
-        h2 {
-            width: 10vw;
-            text-align: right;
-            border-right: 1px solid $color-dark;
-            padding-right: 5px;
-        }
-        &>ol {
-            width: 70vw;
-            overflow: hidden;
-            &>li {
-                position: absolute;
-                height: 10px;
-                width: 10px;
-                border-radius: 10px;
-                background: $color-dark;
-                animation-duration: 2s;
-                animation-name: slideout;
-                animation-fill-mode: forwards;
-            }
-        }  
-        @keyframes slideout {
-            0% {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            50% {
-                transform: translateX(70vw);
-                opacity: 1;
-            }
-            100% {
-                transform: translateX(70vw);
-                opacity: 0;
-            }
-        }
+  user-select: none;
+
+  &>:nth-child(4),
+  &>:nth-child(5),
+  &>:nth-child(6) {
+    align-items: center;
+    display: flex;
+
+    h2 {
+      border-right: 1px solid $color-dark;
+      padding-right: 5px;
+      text-align: right;
+      width: 10vw;
     }
+
+    &>ol {
+      overflow: hidden;
+      width: 70vw;
+
+      &>li {
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-name: slideout;
+        background: $color-dark;
+        border-radius: 10px;
+        height: 10px;
+        position: absolute;
+        width: 10px;
+      }
+    }
+
+    @keyframes slideout {
+
+      0% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateX(70vw);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateX(70vw);
+      }
+    }
+  }
 }

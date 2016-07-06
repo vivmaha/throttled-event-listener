@@ -76,6 +76,9 @@ module.exports = function (grunt) {
                 },
             },
         },
+        sasslint: {
+            target: ['src/**/*.scss'],
+        },
         watch: {
             rebuild: {
                 files: [
@@ -103,10 +106,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-jscs');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-sass-lint');
 
     grunt.registerTask('build', [
-        'jshint',
-        'jscs',
         'clean',
         'copy',
         'browserify',
@@ -114,9 +116,16 @@ module.exports = function (grunt) {
         'postcss',
     ])
 
+    grunt.registerTask('lint', [
+        'jshint',        
+        'jscs',
+        'sasslint',
+    ])
+
     grunt.registerTask('serve', [
         'build',
-        'connect',
-        'watch'
+        'connect',        
+        'lint',
+        'watch',        
     ])
 };

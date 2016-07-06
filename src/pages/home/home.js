@@ -10,13 +10,12 @@
                 var Stream = function(name) {
                     this.name = name;
                     this.data = [];
-                }
+                };
 
                 Stream.prototype.fire = function() {
                     this.data.push({});
                     $scope.$apply();
-                }
-
+                };
 
                 var inputStream = new Stream('input');
                 var throttledStream = new Stream('throttled');

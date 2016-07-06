@@ -20,12 +20,12 @@ exports.add = function(
         }
         if (elapsedTime < timeout) {
             return;
-        };
+        }
         lastTime = newLastTime;
         requestAnimationFrame(function () {
             listener(event);
         });
-    };
+    }
 
     window.addEventListener(type, wrappedListener);
     

@@ -48,6 +48,9 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        jshint: {
+            all: ['src/**/*.js'],
+        },
         postcss: {
             options: {
                 processors: [
@@ -87,11 +90,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-sass');
 
     grunt.registerTask('build', [
+        'jshint',
         'clean',
         'copy',
         'browserify',

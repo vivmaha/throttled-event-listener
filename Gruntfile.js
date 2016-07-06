@@ -1,6 +1,6 @@
 module.exports = function (grunt) {
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),        
+        pkg: grunt.file.readJSON('package.json'),
         browserify: {
             dist: {
                 files: {
@@ -12,9 +12,9 @@ module.exports = function (grunt) {
             server: {
                 options: {
                     port: 9001,
-                    base: './build',                    
+                    base: './build',
                     livereload: true,
-                    hostname:'localhost',
+                    hostname: 'localhost',
                 },
             },
         },
@@ -48,13 +48,21 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        jscs: {
+            src: 'src/**/*.js',
+            options: {
+                preset: 'airbnb', 
+                fix: true, // Autofix code style violations when possible.
+                validateLineBreaks: "CRLF"
+            }
+        },
         jshint: {
             all: ['src/**/*.js'],
         },
         postcss: {
             options: {
                 processors: [
-                    require('autoprefixer')({browsers: 'last 2 versions'}),
+                    require('autoprefixer')({ browsers: 'last 2 versions' }),
                 ]
             },
             dist: {
@@ -92,11 +100,13 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-jscs');
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-sass');
 
     grunt.registerTask('build', [
         'jshint',
+        'jscs',
         'clean',
         'copy',
         'browserify',

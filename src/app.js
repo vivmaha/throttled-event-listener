@@ -6,9 +6,9 @@ exports.app.config(['$routeProvider', '$compileProvider',
     function ($routeProvider, $compileProvider) {
         $routeProvider.when('/', {
             templateUrl: 'pages/home/home.html',
-            controller: 'pageHome', 
-        });
-        
+            controller: 'pageHome',
+          });
+
         $compileProvider.debugInfoEnabled(false);
-    }
+      },
 ]);

@@ -1,4 +1,4 @@
-exports.add = function(
+exports.add = function (
     type,
     timeout,
     listener,
@@ -6,45 +6,48 @@ exports.add = function(
 ) {
     var lastTime = new Date();
     if (!options) {
-        options = {};
+      options = {};
     }
 
     function wrappedListener(event) {
-        if (options.nonThrottledListener) {
-            options.nonThrottledListener(event);
-        }
-        var newLastTime = new Date();
-        var elapsedTime = newLastTime - lastTime;
-        if (options.debounce) {
-            lastTime = newLastTime;
-        }
-        if (elapsedTime < timeout) {
-            return;
-        }
+      if (options.nonThrottledListener) {
+        options.nonThrottledListener(event);
+      }
+
+      var newLastTime = new Date();
+      var elapsedTime = newLastTime - lastTime;
+      if (options.debounce) {
         lastTime = newLastTime;
-        requestAnimationFrame(function () {
-            listener(event);
+      }
+
+      if (elapsedTime < timeout) {
+        return;
+      }
+
+      lastTime = newLastTime;
+      requestAnimationFrame(function () {
+          listener(event);
         });
     }
 
     window.addEventListener(type, wrappedListener);
-    
-    /* 
-    
+
+    /*
+
     Common pattern:
-        
-        throttler.add(..., updateUI, ...);        
+
+        throttler.add(..., updateUI, ...);
         // UI has to be updated even if no events have fired as yet
         requestAnimationFrame(updateUI);
 
     To simplify this scenario, the throttler fires a one-time event below:
 
-    */    
+    */
     requestAnimationFrame(wrappedListener);
 
     return {
         end: function () {
             window.removeEventListener(type, wrappedListener);
-        }
-    };
-};
+          },
+      };
+  };

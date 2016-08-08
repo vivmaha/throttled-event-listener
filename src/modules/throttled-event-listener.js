@@ -4,7 +4,8 @@ exports.add = function (
     listener,
     options // { debounce: bool, nonThrottledListener: function(event)}
 ) {
-    var lastTime = new Date();
+    var lastTime = new Date(0);
+
     if (!options) {
       options = {};
     }

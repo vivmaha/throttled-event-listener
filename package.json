@@ -1,6 +1,6 @@
 {
   "name": "throttled-event-listener",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Throttle or debounce calls to window.addEventListener(). The listener will additionally be throttled by window.requestAnimationFrame().",
   "keywords": [
     "throttle",

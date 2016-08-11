@@ -35,7 +35,15 @@ Throttle or debounce calls to window.addEventListener(). The listener will addit
 
 ## Stop throttle
 
-    throttler.end();
+    var throttler = require('throttled-event-listener');
+    
+    // Start throttle
+    var throttle = throttler.add(
+        // ...
+    );
+    
+    // Stop throttle
+    throttle.end();
 
 # Build
 
